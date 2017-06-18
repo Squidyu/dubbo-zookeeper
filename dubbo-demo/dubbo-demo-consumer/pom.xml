@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.squid.dubbo.demo</groupId>
+		<artifactId>dubbo-demo</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>dubbo-demo-consumer</artifactId>
+	<dependencies>
+		<dependency>
+			<groupId>com.squid.dubbo.demo</groupId>
+			<artifactId>dubbo-demo-interface</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!--引入Spring依赖包 --> 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId> 
+			<version>4.3.6.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.3.6.RELEASE</version>
+		</dependency>
+<!-- Dubbo相关 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>2.5.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.18.1-GA</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.netty/netty -->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty</artifactId>
+			<version>3.10.6.Final</version>
+		</dependency>
+		
+		<!-- ZK-client -->
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.1</version>
+		</dependency>
+	</dependencies>
+</project>
